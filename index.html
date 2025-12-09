@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta charset="utf-8">
+        <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+        <title>Scanaura</title>
+        
+    </head>
+    <body>
+        <a-scene embedded arjs="patternRatio:0.90;">
+            <a-assets>
+                <video id="mvrmovie" position="0 0 0" width="0.5" height="0.5" autoplay loop="true" src="MVR-movie.mp4"></video>
+            </a-assets>
+            <a-marker type="pattern" url="qr-code-marker-mvr.patt">
+                <a-image id="top-ayman" width="2" height="1" position="0 0 -1" rotation="-90 0 0" src="top-ayman.png"></a-image>
+                <a-image id="aboutus" width="1.5" height="1" position="1 0 1" rotation="-90 0 0" src="Aboutus-rightbottom.png"></a-image>
+                <a-video src="#mvrmovie" position="1 0 0" rotation="-90 0 0"></a-video>
+            </a-marker>
+            <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+</html>
